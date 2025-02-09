@@ -2,10 +2,22 @@
   "manifest_version": 3,
   "name": "Open Academic Translator",
   "version": "1.0",
-  "permissions": ["storage", "tabCapture", "scripting"],
+  "permissions": [
+    "storage",
+    "tabCapture", 
+    "scripting",
+    "activeTab"       // Adicionei para controle do player de vídeo
+  ],
+  "host_permissions": [  // Novo campo obrigatório no Manifest V3
+    "*://*.youtube.com/*"
+  ],
   "action": {
     "default_popup": "src/ui/popup.html",
-    "default_icon": "public/icons/icon-128.png"
+    "default_icon": {
+      "16": "public/icons/icon-16.png",
+      "48": "public/icons/icon-48.png",
+      "128": "public/icons/icon-128.png"
+    }
   },
   "background": {
     "service_worker": "src/background.js",
@@ -14,6 +26,13 @@
   "content_scripts": [{
     "matches": ["*://*.youtube.com/*"],
     "css": ["src/ui/subtitles.css"],
-    "js": ["src/content.js"]
+    "js": [
+      "src/utils/deepspeech.js",  // Adicionei ordem de carregamento
+      "src/content.js"
+    ]
+  }],
+  "web_accessible_resources": [{  // Necessário para acessar modelos
+    "resources": ["public/models/*"],
+    "matches": ["*://*.youtube.com/*"]
   }]
 }
