@@ -1,0 +1,20 @@
+{
+  "name": "translatorplugin",
+  "version": "1.0.0",
+  "description": "Chrome extension for real-time YouTube video translation (Open Source)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianoaguiar07/open-academic-translator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucianoaguiar07/open-academic-translator/issues"
+  },
+  "homepage": "https://github.com/lucianoaguiar07/open-academic-translator#readme"
+}
