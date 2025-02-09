@@ -1,6 +1,6 @@
 import { AcademicAudioCapture } from './audio/capture.js';
-import { StudentSTT } from './stt/deepspeech.js';
-import { AcademicTranslator } from './translation/libretranslate.js';
+import { StudentSTT } from '../open-academic-translator/src/stt/deepspeech.js';
+import { AcademicTranslator } from '../open-academic-translator/src/translation/libretranslate.js';
 
 chrome.runtime.onMessage.addListener((request) => {
   if (request.action === 'START_TRANSLATION') {
