@@ -1,29 +1,5 @@
-# Dependências
 node_modules/
-venv/
-.pip/
 .env
-
-# Build
-public/build/
-dist/
-
-# Modelos grandes
-public/models/*.pbmm
-!public/models/deepspeech-quantized.pbmm
-
-# Docker
-docker-compose.yml
 .DS_Store
-
-# Editor
-.vscode/
-.idea/
-
-# Logs
-*.log
-logs/
-
-# Testes
-coverage/
-.nyc_output/
+public/models/*
+!public/models/deepspeech-quantized.pbmm

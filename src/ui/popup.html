@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Academic Translator</h1>
+    
+    <div class="language-select">
+      <label>Idioma Alvo:</label>
+      <select id="targetLang">
+        <option value="en">Inglês</option>
+        <option value="es">Espanhol</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
+
+    <button id="startBtn">▶ Iniciar Tradução</button>
+    
+    <div class="status">
+      <div class="loader"></div>
+      <span id="statusText">Pronto</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

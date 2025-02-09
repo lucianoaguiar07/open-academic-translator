@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Open Academic Translator",
+  "version": "1.0",
+  "permissions": ["storage", "tabCapture", "scripting"],
+  "action": {
+    "default_popup": "src/ui/popup.html",
+    "default_icon": "public/icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "css": ["src/ui/subtitles.css"],
+    "js": ["src/content.js"]
+  }]
+}
