@@ -1,0 +1,2 @@
+public/models/*.pbmm filter=lfs diff=lfs merge=lfs -text
+public/models/*.scorer filter=lfs diff=lfs merge=lfs -text
